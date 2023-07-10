@@ -105,3 +105,61 @@ j1 = Jeep(6000,1400,6,666666)
 j1.show_detail()
 
 
+# types of inheritance
+
+#==> multiple inheritance
+
+class Parent1:
+    def assing_str1(self,str1):
+        self.str1 = str1
+    def show_str1(self):
+        return self.str1
+
+class Parent2:
+    def assing_str2(self,str2):
+        self.str2 = str2
+    def show_str2(self):
+        return self.str2
+
+class derived(Parent1,Parent2):
+    def assing_str3(self,str3):
+        self.str3 = str3
+    def show_str3(self):
+        return self.str3
+
+s1 = derived()
+
+s1.assing_str1('cdscds')
+s1.assing_str2('dadsd')
+s1.assing_str3('cccc')
+print(s1.show_str1())
+
+# multi-level inheritance
+
+class Parent:
+    def assing_name(self,name):
+        self.name = name
+    def show_name(self):
+        return self.name
+    
+class Child(Parent):
+    def assing_age(self,age):
+        self.age = age
+    def show_age(self):
+        return self.age
+    
+class GrandChild(Child):
+    def assing_gender(self,gender):
+        self.gender = gender
+    def show_gender(self):
+        return self.gender
+
+g1 = GrandChild()
+
+g1.assing_name('krishna')
+g1.assing_age(15)
+g1.assing_gender('male')
+
+print(g1.show_name())
+print(g1.show_age())
+print(g1.show_gender())
