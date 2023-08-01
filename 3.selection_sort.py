@@ -36,20 +36,3 @@
 # selection_sort(lst)
 
 # print(lst)
-
-def selction_sort(nums):
-    n = len(nums)
-
-    for i in range(n):
-        min_pos = i
-        for j in range(i,n):
-            if(nums[j]<nums[min_pos]):
-                min_pos = j
-        
-        temp = nums[i]
-        nums[i] = nums[min_pos]
-        nums[min_pos] = temp
-
-nums = [3,5,1,0,6,3]
-selction_sort(nums)
-print(nums)

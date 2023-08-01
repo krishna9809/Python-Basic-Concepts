@@ -111,12 +111,3 @@
 
 
 
-# i=0
-# while i< 3:
-#  print(i)
-# i += 1
-
-def cube(x):
-  return x * x * x
-x = cube(3)
-print x
